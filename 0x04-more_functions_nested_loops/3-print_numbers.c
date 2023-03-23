@@ -1,18 +1,17 @@
 #include "main.h"
 
 /**
- * print_numbers - prints numbers
- * _putchar - used to print out characters
- * Return: the characters
+ * print_numbers - prints numbers between 0 to 9.
+ * _putchar - prints out single chars.
+ * Return: doesn't return anything.
  */
-
 void print_numbers(void)
 {
 	int ch;
 
-	for (ch = 48; ch <= 57; ch++)
+	for (ch = 48; ch < 58; ch++)
 	{
 		_putchar(ch);
-	}	
+	}
 	_putchar('\n');
 }
