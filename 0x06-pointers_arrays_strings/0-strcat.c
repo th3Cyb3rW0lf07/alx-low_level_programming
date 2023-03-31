@@ -1,15 +1,16 @@
 #include "main.h"
 
 /**
- * *_strcat - concatenates two strings
- * @dest - char
- * @src - char
- * Return - dest
+ * _strcat - concatenates two strings
+ * @dest: char
+ * @src: char
+ * Return: dest
  */
 
 char *_strcat(char *dest, char *src)
 {
 	char *ptr = dest;
+
 	while (*ptr != '\0')
 	{
 		ptr++;
