@@ -4,6 +4,7 @@
  * _strspn - checks for the length of a prefix substring
  * @s: the initial segment
  * @accept: the accepted bytes
+ *
  * Return: number of bytes in s same as accept
  */
 
