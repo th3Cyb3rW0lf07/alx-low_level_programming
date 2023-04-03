@@ -7,28 +7,33 @@
  * Return: number of bytes in s same as accept
  */
 
-unsigned int _strspn(char *s, char *accept)
+unsigned int *_strspn(char *s, char *accept)
 {
-	unsigned int l = 0;
-	char *m = accept;
+	unsigned int pel = 0;
+	char *k;
+	int clear;
 
+	if (*s == '\0' || *accept == '\0')
+	{
+		return (0);
+	}
 	while (*s != '\0')
 	{
-		while (*m != '\0')
+		clear = 0;
+		for (k = accept; *k != '\0'; k++)
 		{
-			if (*s == *m)
+			if (*s == *k)
 			{
-				l++;
+				clear = 1;
 				break;
 			}
-			m++;
 		}
-		if (*p == '\0')
+		if (clear == 0)
 		{
-			return (l);
+			return (pel);
 		}
-		m = accept;
+		pel++;
 		s++;
 	}
-	return (l);
+	return (pel);
 }
