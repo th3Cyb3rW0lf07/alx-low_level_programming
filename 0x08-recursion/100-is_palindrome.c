@@ -59,6 +59,6 @@ int is_palindrome(char *s)
 	}
 	else
 	{
-		return (palindrome(s, 0, len - 1));
+		return (palindrome_finder(s, 0, len - 1));
 	}
 }
