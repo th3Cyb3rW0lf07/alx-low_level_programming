@@ -4,7 +4,7 @@
 /**
  * main - prints the amount of change
  * @argc: argument counter
- * @argv: argumeny vector
+ * @argv: argument vector
  * Return: 0 if succesful, otherwise 1
  */
 
