@@ -10,9 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, c, d;
-
-	c = 0;
+	int cents, d, c = 0;
 
 	int den[] = {25, 10, 5, 2, 1};
 
@@ -35,7 +33,8 @@ int main(int argc, char *argv[])
 		while (cents >= den[d])
 		{
 			cents -= den[d];
-			c++;		}
+			c++;		
+		}
 	}
 
 	printf("%d\n", c);
