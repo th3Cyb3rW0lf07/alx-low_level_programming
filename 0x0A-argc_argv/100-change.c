@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		while (cents >= den[d])
 		{
 			cents -= den[d];
-			c++;		
+			c++;
 		}
 	}
 
