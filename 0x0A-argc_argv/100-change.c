@@ -30,10 +30,12 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (d = 0; d < 5; d++)
+	for (d = 0; d < 5 && cents >= 0; d++)
 	{
-		c += cents / den[d];
-		cents %= den[d];
+		while (cents >= den[d])
+		{
+			cents -= den[d];
+			c++;		}
 	}
 
 	printf("%d\n", c);
