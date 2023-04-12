@@ -20,7 +20,7 @@ char **strtow(char *str)
 	}
 	for (m = 0; m < length; m++)
 	{
-		if (str[m] != " " && (m == 0 || str[m - 1] == " "))
+		if (str[m] != ' ' && (m == 0 || str[m - 1] == ' '))
 		count++;
 	}
 	word = malloc(sizeof(char *) * (count + 1));
@@ -30,10 +30,10 @@ char **strtow(char *str)
 	}
 	for (m = 0, n = 0; m < length; m++)
 	{
-		if (str[m] != " ")
+		if (str[m] != ' ')
 		{
 			p = m;
-			while (str[p] != " " && p < length)
+			while (str[p] != ' ' && p < length)
 				p++;
 			word[n] = malloc(sizeof(char) * (p - m + 1));
 			if (word[n] == NULL)
