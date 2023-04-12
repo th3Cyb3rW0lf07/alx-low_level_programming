@@ -28,7 +28,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	for (m = 0; n = 0; m < length; m++)
+	for (m = 0, n = 0; m < length; m++)
 	{
 		if (str[m] != ' ')
 		{
