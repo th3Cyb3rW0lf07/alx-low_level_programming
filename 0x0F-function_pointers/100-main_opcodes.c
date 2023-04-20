@@ -29,11 +29,9 @@ int main(int argc, char *argv[])
 
 	for (n = 0; n < n_bytes; n++)
 	{
-		printf("02x", opcode[n] & 0xFF);
+		printf("%02x", opcode[n] & 0xFF);
 		if (n != n_bytes - 1)
-		{
 			printf(" ");
-		}
 	}
 	printf("\n");
 	return (0);
