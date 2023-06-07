@@ -35,7 +35,7 @@ int str_len(char *s)
 
 int palindrome_helper(char *s, int start, int end)
 {
-	if (start <= end)
+	if (start >= end)
 	{
 		return (1);
 	}
