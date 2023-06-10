@@ -7,7 +7,6 @@
  * @argv: argument vector
  * Return: 0 if successful, 1 if otherwise
 */
-
 int main(int argc, char *argv[])
 {
 	int cents, coins = 0;
@@ -18,6 +17,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
 	cents = atoi(argv[1]);
 
 	if (cents < 0)
@@ -28,26 +28,20 @@ int main(int argc, char *argv[])
 
 	while (cents > 0)
 	{
-		switch (cents)
-		{
-			case 25:
-				cents -= coin25;
-				break;
-			case 10:
-				cents -= coin10;
-				break;
-			case 5:
-				cents -= coin5;
-				break;
-			case 2:
-				cents -= coin2;
-				break;
-			default:
-				cents -= coin1;
-				break;
-		}
+		if (cents >= coin25)
+			cents -= coin25;
+		else if (cents >= coin10)
+			cents -= coin10;
+		else if (cents >= coin5)
+			cents -= coin5;
+		else if (cents >= coin2)
+			cents -= coin2;
+		else if (cents >= coin1)
+			cents -= coin1;
+
 		coins++;
 	}
+
 	printf("%d\n", coins);
 	return (0);
 }
