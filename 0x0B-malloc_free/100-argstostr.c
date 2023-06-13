@@ -11,7 +11,8 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, length, curr_index = 0;
+	int i, j, length = 0, curr_index = 0;
+
 	char *concat_str;
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -20,6 +21,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 			length++;
+		length++;
 	}
 
 	concat_str = malloc((length + 1) * sizeof(char));
