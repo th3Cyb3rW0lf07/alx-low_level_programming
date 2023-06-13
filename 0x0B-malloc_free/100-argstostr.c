@@ -12,8 +12,8 @@
 char *argstostr(int ac, char **av)
 {
 	int i, j, length = 0, curr_index = 0;
-
 	char *concat_str;
+
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
@@ -25,6 +25,7 @@ char *argstostr(int ac, char **av)
 	}
 
 	concat_str = malloc((length + 1) * sizeof(char));
+
 	if (concat_str == NULL)
 		return (NULL);
 
