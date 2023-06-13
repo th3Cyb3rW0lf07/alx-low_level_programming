@@ -24,16 +24,16 @@ char *_strdup(char *str)
 		len++;
 	}
 
-    if (len == 0)
-    {
-        dupl = (char *)malloc(1 * sizeof(char));
-        if (dupl == NULL)
-        {
-            return (NULL);
-        }
-        dupl[0] = '\0';
-        return (dupl);
-    }
+	if (len == 0)
+	{
+		dupl = (char *)malloc(1 * sizeof(char));
+		if (dupl == NULL)
+		{
+			return (NULL);
+		}
+		dupl[0] = '\0';
+		return (dupl);
+	}
 
 	dupl = (char *)malloc((len + 1) * sizeof(char));
 
