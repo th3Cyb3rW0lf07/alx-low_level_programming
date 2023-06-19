@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	concatenated = malloc(sizeof(char) * (l1 + n + 1));
 
 	if (concatenated == NULL)
-		return NULL;
+		return (NULL);
 
 	for (i = 0; i < l1; i++)
 		concatenated[i] = s1[i];
