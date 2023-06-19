@@ -10,9 +10,12 @@
  * If malloc fails, the function terminates the process with a status value of 98
  */
 
-void *malloc_checked(unsigned int b) {
+void *malloc_checked(unsigned int b)
+{
 	void *p = malloc(b);
-	if (p == NULL) {
+
+	if (p == NULL)
+	{
 		exit(98);
 	}
 	return (p);
