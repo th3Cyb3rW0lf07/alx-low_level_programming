@@ -67,7 +67,7 @@ void multiply(char *num1, char *num2)
 	}
 
 	total_len = l1 + l2;
-	*result = malloc(total_len * sizeof(int));
+	result = malloc(total_len * sizeof(int));
 
 	if (result == NULL)
 	{
