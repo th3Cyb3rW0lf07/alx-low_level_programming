@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 int validate_number(char *s);
 void multiply(char *num1, char *num2);
