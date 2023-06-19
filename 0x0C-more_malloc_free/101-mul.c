@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3 || !validate_number(argv[1]) || !validate_number(argv[2]))
 	{
+		printf("Error\n");
 		exit(98);
 	}
 
