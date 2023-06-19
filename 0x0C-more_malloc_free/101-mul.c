@@ -53,6 +53,8 @@ void multiply(char *num1, char *num2)
 {
 	int l1 = 0;
 	int l2 = 0;
+	int total_len, *result, i, j, n1, n2;
+	int product, pos1, pos2, sum;
 
 	while (num1[l1])
 	{
@@ -64,31 +66,31 @@ void multiply(char *num1, char *num2)
 		l2++;
 	}
 
-	int total_len = l1 + l2;
-	int *result = malloc(total_len * sizeof(int));
+	total_len = l1 + l2;
+	*result = malloc(total_len * sizeof(int));
 
 	if (result == NULL)
 	{
 		exit(98);
 	}
 
-	for (int i = 0; i < total_len; i++)
+	for (i = 0; i < total_len; i++)
 	{
 		result[i] = 0;
 	}
 
-	for (int i = l1 - 1; i >= 0; i--)
+	for (i = l1 - 1; i >= 0; i--)
 	{
-		for (int j = l2 - 1; j >= 0; j--)
+		for (j = l2 - 1; j >= 0; j--)
 		{
-			int n1 = num1[i] - '0';
-			int n2 = num2[j] - '0';
+			n1 = num1[i] - '0';
+			n2 = num2[j] - '0';
 
-			int product = n1 * n2;
-			int pos1 = i + j;
-			int pos2 = i + j + 1;
+			product = n1 * n2;
+			pos1 = i + j;
+			pos2 = i + j + 1;
 
-			int sum = product + result[pos2];
+			sum = product + result[pos2];
 
 			result[pos1] += sum / 10;
 			result[pos2] = sum % 10;
@@ -108,8 +110,9 @@ void multiply(char *num1, char *num2)
 void print_number(int *result, int length)
 {
 	int leading_zero = 1;
+	int i;
 
-	for (int i = 0; i < length; i++)
+	for (i = 0; i < length; i++)
 	{
 		if (result[i] != 0)
 		{
