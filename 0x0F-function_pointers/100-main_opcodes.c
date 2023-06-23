@@ -4,7 +4,7 @@
 
 /**
  * print_opcodes - prints opcodes
- * @num_bytes - number of bytes passed
+ * @num_bytes: number of bytes passed
 */
 
 void print_opcodes(int num_bytes)
