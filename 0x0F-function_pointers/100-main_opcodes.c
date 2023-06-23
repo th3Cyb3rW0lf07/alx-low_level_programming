@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "function_pointers.h"
+
+/**
+ * print_opcodes - prints opcodes
+ * @num_bytes - number of bytes passed
+*/
 
 void print_opcodes(int num_bytes)
 {
@@ -13,6 +19,13 @@ void print_opcodes(int num_bytes)
 
 	printf("\n");
 }
+
+/**
+ * main - calls print_opcodes
+ * @argc: argument counter
+ * @argv: argument vector
+ * Return: 0 if successful, 1 or 2 itherwise
+*/
 
 int main(int argc, char *argv[])
 {
