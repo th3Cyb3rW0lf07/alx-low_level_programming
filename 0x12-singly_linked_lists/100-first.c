@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void my_const() __attribute__((constructor));
+void my_const(void) __attribute__((constructor));
 
 /**
  * print - prints a message
