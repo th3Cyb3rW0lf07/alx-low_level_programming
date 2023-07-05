@@ -24,5 +24,5 @@ size_t print_listint_safe(const listint_t *head)
 		current = current->next;
 	}
 
-	return count;
+	return (count);
 }
