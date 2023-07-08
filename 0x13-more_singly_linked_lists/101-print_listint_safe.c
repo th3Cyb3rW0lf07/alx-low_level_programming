@@ -10,6 +10,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *current = head;
 	size_t count = 0;
+	int loop_detected = 0;
 
 	while (current != NULL)
 	{
@@ -18,11 +19,16 @@ size_t print_listint_safe(const listint_t *head)
 
 		if (current->next >= current)
 		{
-			printf("-> [%p] %d\n", (void *)current, current->next->n);
-			exit(98);
+			printf("-> [%p] %d\n", (void *)current, (current->next)->n);
+			loop_detected = 1;
+			break;
 		}
+
 		current = current->next;
 	}
 
-	return (count);
+	if (loop_detected)
+		exit(98);
+
+	return count;
 }
